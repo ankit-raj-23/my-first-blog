@@ -3,85 +3,16 @@
         <title>Ankit blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="">ankitraj23 &nbsp</a>Blog</h1>
-        </div>
+      <div>
+        <h1><a href="/">Ankitt Blog</a></h1>
+      </div>
 
+      {% for post in posts %}
         <div>
-            <p>published: 07.02.2019, 12:14</p>
-            <h2><a href="">Blockchain in Operations and Supply chain management.</a></h2>
-            <p><br>
-The production of goods (products) has become a really complex,
- entangled and elaborate process mainly due to increase in number
-  of intermediate organizations between the manufacturer (or the
-  producer) and the customer, which in turn has happened mainly
-  because of globalization .<br>The market expansion led by globaliz
-  ation  has forced the companies to expand the portfolios of th
-  e product in order to meet the demands of new markets . That’s
-  why enough detail of product processing and shipping journey is
- not available to the industries .<br>The main challenge to operations
-  and supply chain management is in the traceability and accountability
-   of data management system.<br> Most of the companies have invested in
-   computerized enterprise resource planning, digital shipping notices and radio
- frequency identifier scanning and point to point messaging system. The main
- problem with these systems is that they are mostly out of sync and move data
- only one stop down the supply chain.<br> Apart from this, when it comes to shipping
-  usually the shipment has its digital number which only tells where the box is
-  and who signed for it, not other useful information. Another problem which
-  cannot be solved by these information and communication technologies is lack
-  of trust between inter-organizational collaborations.<br> As the supply chain
-  partners see themselves as competing organizations for revenue, instead of
-  seeing themselves as partners.<br> Trust builds up slowly but the access to
-  accurate enterprise data and information in a supply chain is only possible
-  if there is high trust. The information and communication technologies fails
-  here, as the competing companies might mislead knowingly or unconsciously the
-  other partners with wrong or inaccurate information. Another major problem in
-  operations management is corruption in their own organization, as most of the
-  decisions are taken by humans and sometimes humans can take decisions that
-  might not be good for the company but be great for them on individual scale.
-  Some instances of corruption usually seen in a vast supply chain network are
-  somewhere in the supply chain, someone insists on getting a product from a
-  specific supplier, without looking at any other offers. When confronted, they
-  insist that only that supplier can meet certain specifications, which may or
-  may not be true. Also certain suppliers in the supply chain network may get
-  preferential treatment by some of the procurement officers because of a
-  personal relationship. Another most common case of corruption is that one of
-  the procurement officers has a special deal going on with the suppliers. In
-  exchange for a bribe, the supplier can compensate on the quality of their
-  products. Suppliers and procurement officers can “cook the books” to charge
-  more than what the transaction was actually worth. A supply chain network
-  simply has way too many components in to keep track of them all. As such,
-  suppliers can pretty much get away with anything. This is a big problem that
-  traditional supply chain management systems have. They are not scalable.
-  Tampering of data is another major threat which is very difficult to point
- out in traditional supply chain management system mainly due to lack of
- traceability.</p>
- <p>Blockchain comes as the solution to all the problems mentioned above which are
- faced in operations and supply chain management nowadays. Use of blockchain in
- supply chain areas has made the whole process more transparent, trustworthy ,
- authentic and legitimate. Blockchain in supply chain is basically is a distributed
- system between all the participants (mainly organizations) in a supply chain
- network which stores transactions (of money, logistics etc) between those
-participants in a consistent, unchanging, secure and chronological chain. The
-best thing about blockchain is that it keeps chronological chain of records in
-encrypted blocks. Systems can communicate directly with each other in the
-blockchain, each system can use a pair of private or public key to identify,
-and communication between systems is secure because each communication is signed
-by the sender's private key. Each supply chain network participant can have a
-wallet in it that can be used to certify the authenticity, integrity and
-invariability of data by means of the hash sum that is public on the blockchain
-and accessible at any time, while the original data is stored off-chain and
-exchanged between companies using conventional methods. Blockchain therefore
-creates transparency and provides a single, secure point of truth. Blockchains
-can also play an important role in stolen merchandise recovery and in avoiding
-fraudulent transactions.
-</p>
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>to be published: 08.02.2020, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>wait!</p>
-        </div>
+      {% endfor %}
     </body>
 </html>
